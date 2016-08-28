@@ -11,13 +11,13 @@ use JustMd5\Express\Express;
 class NormalTest extends PHPUnit_Framework_TestCase
 {
     /**
-     * @return $this
+     * @return string
      */
     public function testExpressNameJsonCheck()
     {
-        $this->assertJson(Express::getExpressName(881443775034378914));
+        $this->assertJson(Express::getExpressName(719296993609));
 
-        return '881443775034378914';
+        return '719296993609';
     }
 
     /**

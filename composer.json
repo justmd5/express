@@ -1,0 +1,29 @@
+{
+  "name": "justmd5/express",
+  "keywords": [
+    "express",
+    "kuaidi",
+    "快递100",
+    "快递",
+    "快递查询"
+  ],
+  "authors": [
+    {
+      "name": "justmd5",
+      "email": "ding21st@gmail.com"
+    }
+  ],
+  "license": "MIT",
+  "require": {
+    "php": ">=5.5.0",
+    "justmd5/simplehttp": "1.0.*"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "4.8.*"
+  },
+  "autoload": {
+    "psr-4": {
+      "JustMd5\\": "src/"
+    }
+  }
+}

@@ -4,6 +4,6 @@
  * File: phpunit.php
  * User: ding21st@gmail.com
  * Date: 16/4/18
- * Time: 下午4:06
+ * Time: 下午4:06.
  */
-include __DIR__ . '/vendor/autoload.php';
+include __DIR__.'/vendor/autoload.php';

@@ -1,4 +1,5 @@
 <?php
+
 use JustMd5\Express\Express;
 
 /**
@@ -6,7 +7,7 @@ use JustMd5\Express\Express;
  * File: NormalTest.php
  * User: ding21st@gmail.com
  * Date: 16/4/18
- * Time: 下午4:09
+ * Time: 下午4:09.
  */
 class NormalTest extends PHPUnit_Framework_TestCase
 {
@@ -68,7 +69,5 @@ class NormalTest extends PHPUnit_Framework_TestCase
         $InfoArray = json_decode(json_encode($InfoJsonObject), true);
         $this->assertArrayHasKey('data', $InfoArray, '数组中data信息不存在');
         $this->assertNotEmpty($InfoArray['data'], '快递信息为空');
-
     }
-
 }

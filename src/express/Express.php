@@ -11,7 +11,7 @@
  * Class Express.
  */
 
-namespace JustMd5\Express;
+namespace JustMd5\express;
 
 use Soyhuce\Zttp\Zttp;
 

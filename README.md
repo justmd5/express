@@ -28,4 +28,4 @@ require 'vendor/autoload.php';
 echo var_export(Express::getExpressInfo(881443775034378914), true), PHP_EOL;
 
 ```
-> 本sdk 仅供参考，如果商用请使用官方取到申请的api.
+> 本sdk 仅供参考，如果商用请使用官方渠道申请的api.

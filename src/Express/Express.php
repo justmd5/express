@@ -11,9 +11,9 @@
  * Class Express.
  */
 
-namespace  JustMd5\Express;
+namespace JustMd5\Express;
 
-use JustMd5\SimpleHttp\Http;
+use Soyhuce\Zttp\Zttp;
 
 class Express
 {
@@ -26,32 +26,34 @@ class Express
      *
      * @param string $ExpressNumber 快递单号
      *
-     * @return bool|string 快递信息json数据
+     * @return array|false 快递信息json数据
      */
-    public static function getExpressInfo($ExpressNumber)
+    public static function getExpressInfo ($ExpressNumber)
     {
-        $keywords = self::getExpressName($ExpressNumber);
-        $ExpressNames = json_decode($keywords, true);
+        $ExpressNames = static::getExpressName($ExpressNumber);
+
         //未查看到快递信息返回false
         if (empty($ExpressNames) || !isset($ExpressNames[0]['comCode'])) {
             return false;
         }
-
-        //返回查询的信息
-        return Http::request('GET', self::KUAIDI100.'/query', [
+        $response = Zttp::asFormParams()->get(static::KUAIDI100 . '/query', [
             'type'   => $ExpressNames[0]['comCode'],
             'postid' => $ExpressNumber,
         ]);
+
+        return $response->json();
     }
 
     /**获得快递公司名字
      *
      * @param string $ExpressNumber 订单号
      *
-     * @return string 返回订单快递公司名称json数据
+     * @return array 返回订单快递公司名称json数据
      */
-    public static function getExpressName($ExpressNumber)
+    public static function getExpressName ($ExpressNumber)
     {
-        return Http::request('GET', self::KUAIDI100.'/autonumber/auto', ['num' => $ExpressNumber]);
+        $response = Zttp::asFormParams()->get(static::KUAIDI100 . '/autonumber/auto', ['num' => $ExpressNumber]);
+
+        return $response->json();
     }
 }

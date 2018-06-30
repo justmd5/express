@@ -28,7 +28,7 @@ class Express
      *
      * @return array|false 快递信息json数据
      */
-    public static function getExpressInfo ($ExpressNumber)
+    public static function getExpressInfo($ExpressNumber)
     {
         $ExpressNames = static::getExpressName($ExpressNumber);
 
@@ -36,7 +36,7 @@ class Express
         if (empty($ExpressNames) || !isset($ExpressNames[0]['comCode'])) {
             return false;
         }
-        $response = Zttp::asFormParams()->get(static::KUAIDI100 . '/query', [
+        $response = Zttp::asFormParams()->get(static::KUAIDI100.'/query', [
             'type'   => $ExpressNames[0]['comCode'],
             'postid' => $ExpressNumber,
         ]);
@@ -50,9 +50,9 @@ class Express
      *
      * @return array 返回订单快递公司名称json数据
      */
-    public static function getExpressName ($ExpressNumber)
+    public static function getExpressName($ExpressNumber)
     {
-        $response = Zttp::asFormParams()->get(static::KUAIDI100 . '/autonumber/auto', ['num' => $ExpressNumber]);
+        $response = Zttp::asFormParams()->get(static::KUAIDI100.'/autonumber/auto', ['num' => $ExpressNumber]);
 
         return $response->json();
     }

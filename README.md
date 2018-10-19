@@ -12,7 +12,7 @@
 <a href="https://packagist.org/packages/justmd5/express"><img src="https://img.shields.io/github/license/justmd5/express.svg" alt="License"></a>
 </p>
 
-=======
+---
 
 *基于快递100的快递接口封装*
 

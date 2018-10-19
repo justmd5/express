@@ -28,7 +28,7 @@ class Express
      *
      * @return array|false 快递信息json数据
      */
-    public static function getExpressInfo($ExpressNumber)
+    public static function getExpressInfo(string $ExpressNumber)
     {
         $ExpressNames = static::getExpressName($ExpressNumber);
 
@@ -50,7 +50,7 @@ class Express
      *
      * @return array 返回订单快递公司名称json数据
      */
-    public static function getExpressName($ExpressNumber)
+    public static function getExpressName(string $ExpressNumber)
     {
         $response = Zttp::asFormParams()->get(static::KUAIDI100.'/autonumber/auto', ['num' => $ExpressNumber]);
 

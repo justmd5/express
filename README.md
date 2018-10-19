@@ -3,6 +3,7 @@
 <p align="center">kuaidi100 sdk</p>
 
 <p align="center">
+<a href="https://travis-ci.org/justmd5/express"><img src="https://travis-ci.org/justmd5/express.svg?branch=master" alt="travis-ci"></a>
 <a href="https://styleci.io/repos/23494261"><img src="https://styleci.io/repos/23494261/shield?branch=master" alt="styleci"></a>
 <a href="https://packagist.org/packages/justmd5/express"><img src="https://img.shields.io/packagist/php-v/justmd5/express.svg" alt="PHP from Packagist"></a>
 <a href="https://packagist.org/packages/justmd5/express"><img src="https://poser.pugx.org/justmd5/express/v/stable.svg" alt="Latest Stable Version"></a>
